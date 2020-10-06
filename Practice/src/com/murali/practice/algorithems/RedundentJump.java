@@ -1,4 +1,4 @@
-package com.murali.practice;
+package com.murali.practice.algorithems;
 
 import java.util.Scanner;
 
@@ -36,11 +36,9 @@ public class RedundentJump {
        if (arrayValues[source] == 0) 
            return Integer.MAX_VALUE; 
  
-       // Traverse through all the points 
-       // reachable from arrayValues[length]. Recursively 
-       // get the minimum number of jumps 
-       // needed to reach arrayValues[destination] from these 
-       // reachable points. 
+       // Travel through all the points reachable from arrayValues[length]. 
+       // Recursively we will get the minimum number of jumps 
+       // needed to reach arrayValues[destination] from these reachable points. 
        int minValue = Integer.MAX_VALUE; 
        for (int i = source + 1; i <= destination && i <= source + arrayValues[source]; i++) { 
            int jumps = minimumJumpsToReach(arrayValues, i, destination); 
